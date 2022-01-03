@@ -96,7 +96,7 @@ public class EnrollUser {
     public void connectToDatabase() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(db, "root", "");
+            conn = DriverManager.getConnection(db, "root", "root");
             System.out.println("*****connected to database*****");
             st = conn.createStatement();
             performQuery();
@@ -168,7 +168,7 @@ public class EnrollUser {
         boolean isAdmin=false;
         System.out.println(uname+" "+pwd);
         try {
-            String query = "select * from admin where Username='"+uname+"'";// and Password='" + pwd+"'";
+            String query = "select * from admin where Username='"+uname+"' and Password='" + pwd+"'";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 isAdmin=true;

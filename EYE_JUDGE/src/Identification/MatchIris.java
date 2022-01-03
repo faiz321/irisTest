@@ -28,7 +28,7 @@ public class MatchIris {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn;
             String db = "jdbc:mysql://localhost:3306/eyejudge";
-            conn = DriverManager.getConnection(db, "root", "");
+            conn = DriverManager.getConnection(db, "root", "root");
             System.out.println("*****connected to database*****");
             Statement st = conn.createStatement();
             String query = "select * from personinfo";
