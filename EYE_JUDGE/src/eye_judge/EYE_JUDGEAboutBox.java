@@ -32,7 +32,7 @@ public class EYE_JUDGEAboutBox extends javax.swing.JDialog {
         javax.swing.JLabel versionLabel = new javax.swing.JLabel();
         javax.swing.JLabel appVersionLabel = new javax.swing.JLabel();
         javax.swing.JLabel appDescLabel = new javax.swing.JLabel();
-        imageLabel = new javax.swing.JLabel();
+        javax.swing.JLabel imageLabel = new javax.swing.JLabel();
         javax.swing.JLabel versionLabel1 = new javax.swing.JLabel();
         javax.swing.JLabel appVersionLabel1 = new javax.swing.JLabel();
         javax.swing.JLabel appVersionLabel2 = new javax.swing.JLabel();
@@ -88,29 +88,34 @@ public class EYE_JUDGEAboutBox extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
+                        .addGap(22, 22, 22)
+                        .addComponent(imageLabel)
+                        .addGap(85, 85, 85)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(appDescLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-                            .addComponent(appTitleLabel)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(66, 66, 66)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(versionLabel)
-                                    .addComponent(versionLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(appVersionLabel)
-                                    .addComponent(appVersionLabel1)
-                                    .addComponent(appVersionLabel2)
-                                    .addComponent(appVersionLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addContainerGap())
+                                    .addComponent(appDescLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(versionLabel)
+                                            .addComponent(versionLabel1))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(appVersionLabel)
+                                            .addComponent(appVersionLabel1)
+                                            .addComponent(appVersionLabel2)
+                                            .addComponent(appVersionLabel3))))
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(closeButton)
+                                .addGap(161, 161, 161))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(closeButton)
-                        .addGap(161, 161, 161))))
+                        .addComponent(appTitleLabel)
+                        .addGap(82, 82, 82))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,24 +123,25 @@ public class EYE_JUDGEAboutBox extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(appTitleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(appDescLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(appDescLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(versionLabel)
+                            .addComponent(appVersionLabel))
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(appVersionLabel1)
+                            .addComponent(versionLabel1))
+                        .addGap(12, 12, 12)
+                        .addComponent(appVersionLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(appVersionLabel3))
+                    .addComponent(imageLabel))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(versionLabel)
-                    .addComponent(appVersionLabel))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(appVersionLabel1)
-                    .addComponent(versionLabel1))
-                .addGap(12, 12, 12)
-                .addComponent(appVersionLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(appVersionLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(closeButton))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(closeButton)
+                .addGap(143, 143, 143))
         );
 
         pack();
@@ -143,7 +149,6 @@ public class EYE_JUDGEAboutBox extends javax.swing.JDialog {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton closeButton;
-    private javax.swing.JLabel imageLabel;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
     

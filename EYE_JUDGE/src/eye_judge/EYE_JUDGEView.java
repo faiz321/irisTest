@@ -50,7 +50,7 @@ public class EYE_JUDGEView extends FrameView {
 
     public EYE_JUDGEView(SingleFrameApplication app) {
         super(app);
-    
+
         initComponents();
 
         // status bar initialization - message timeout, idle icon and busy animation, etc
@@ -115,9 +115,9 @@ public class EYE_JUDGEView extends FrameView {
         jButton6.setVisible(false);
         jButton7.setVisible(false);
         jButton8.setVisible(false);
-        if(LoginFrame.getRole().equals("user")){
-            jButton1.setVisible(false);
+        if (LoginFrame.getRole().equals("user")) {
             jMenu3.setEnabled(false);
+            jButton2.setVisible(false);
         }
 
 
@@ -148,7 +148,6 @@ public class EYE_JUDGEView extends FrameView {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
@@ -164,9 +163,6 @@ public class EYE_JUDGEView extends FrameView {
         jTextField3 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -175,6 +171,8 @@ public class EYE_JUDGEView extends FrameView {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -235,27 +233,17 @@ public class EYE_JUDGEView extends FrameView {
             }
         });
 
-        jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
-        jButton1.setName("jButton1"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -269,11 +257,10 @@ public class EYE_JUDGEView extends FrameView {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
+        jLabel1.setBackground(resourceMap.getColor("jLabel1.background")); // NOI18N
         jLabel1.setFont(resourceMap.getFont("jLabel1.font")); // NOI18N
         jLabel1.setForeground(resourceMap.getColor("jLabel1.foreground")); // NOI18N
         jLabel1.setIcon(resourceMap.getIcon("jLabel1.icon")); // NOI18N
@@ -286,20 +273,24 @@ public class EYE_JUDGEView extends FrameView {
         jPanel3.setName("jPanel3"); // NOI18N
         jPanel3.setPreferredSize(new java.awt.Dimension(320, 320));
 
+        jLayeredPane1.setBackground(resourceMap.getColor("jLabel1.background")); // NOI18N
         jLayeredPane1.setName("jLayeredPane1"); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 814, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(resourceMap.getColor("jPanel5.background")); // NOI18N
+        jPanel5.setBackground(resourceMap.getColor("jLabel1.background")); // NOI18N
         jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 2, 2, resourceMap.getColor("jPanel5.border.matteColor"))); // NOI18N
         jPanel5.setFont(resourceMap.getFont("jPanel5.font")); // NOI18N
         jPanel5.setName("jPanel5"); // NOI18N
@@ -403,43 +394,7 @@ public class EYE_JUDGEView extends FrameView {
             }
         });
 
-        jPanel2.setBackground(resourceMap.getColor("jPanel2.background")); // NOI18N
-        jPanel2.setName("jPanel2"); // NOI18N
-        jPanel2.setPreferredSize(new java.awt.Dimension(400, 155));
-        jPanel2.setRequestFocusEnabled(false);
-
-        jLabel6.setBackground(resourceMap.getColor("jLabel6.background")); // NOI18N
-        jLabel6.setFont(resourceMap.getFont("jLabel6.font")); // NOI18N
-        jLabel6.setForeground(resourceMap.getColor("jLabel6.foreground")); // NOI18N
-        jLabel6.setText(resourceMap.getString("jLabel6.text")); // NOI18N
-        jLabel6.setName("jLabel6"); // NOI18N
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-
-        jButton8.setText(resourceMap.getString("jButton8.text")); // NOI18N
-        jButton8.setName("jButton8"); // NOI18N
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        jPanel4.setBackground(resourceMap.getColor("jPanel4.background")); // NOI18N
+        jPanel4.setBackground(resourceMap.getColor("jLabel1.background")); // NOI18N
         jPanel4.setName("jPanel4"); // NOI18N
 
         jLabel9.setFont(resourceMap.getFont("jLabel13.font")); // NOI18N
@@ -482,9 +437,9 @@ public class EYE_JUDGEView extends FrameView {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -499,16 +454,16 @@ public class EYE_JUDGEView extends FrameView {
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(87, 87, 87)
                         .addComponent(jLabel15)))
                 .addContainerGap(193, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(42, Short.MAX_VALUE)
                 .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -523,6 +478,24 @@ public class EYE_JUDGEView extends FrameView {
                 .addGap(23, 23, 23))
         );
 
+        jButton9.setText(resourceMap.getString("jButton9.text")); // NOI18N
+        jButton9.setActionCommand(resourceMap.getString("jButton9.actionCommand")); // NOI18N
+        jButton9.setEnabled(false);
+        jButton9.setName("jButton9"); // NOI18N
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText(resourceMap.getString("jButton8.text")); // NOI18N
+        jButton8.setName("jButton8"); // NOI18N
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
@@ -530,53 +503,52 @@ public class EYE_JUDGEView extends FrameView {
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(jButton6)
-                                .addGap(42, 42, 42)
-                                .addComponent(jButton7)
-                                .addGap(52, 52, 52)
-                                .addComponent(jButton8))
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(327, Short.MAX_VALUE))
+                        .addGap(6, 6, 6)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton6)
+                        .addComponent(jButton7))
+                    .addComponent(jButton9)
+                    .addComponent(jButton8))
+                .addContainerGap(773, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(29, 29, 29)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
                             .addComponent(jButton6)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jButton7)
-                            .addComponent(jButton8))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                            .addGap(18, 18, 18)
+                            .addComponent(jButton9)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton8)
+                            .addGap(282, 282, 282))
+                        .addGroup(mainPanelLayout.createSequentialGroup()
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         menuBar.setName("menuBar"); // NOI18N
@@ -636,10 +608,10 @@ public class EYE_JUDGEView extends FrameView {
                 .addContainerGap()
                 .addComponent(statusMessageLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 1069, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(statusPanelSeparator, javax.swing.GroupLayout.DEFAULT_SIZE, 1493, Short.MAX_VALUE)
+                    .addComponent(statusPanelSeparator, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusPanelLayout.createSequentialGroup()
                         .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -680,8 +652,8 @@ public class EYE_JUDGEView extends FrameView {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         enroll = true;
         identify = false;
-        file=null;
-        jPanel2.setVisible(false);
+        file = null;
+//        jPanel2.setVisible(false);
         jPanel3.setVisible(true);
         jPanel4.setVisible(false);
         jPanel5.setVisible(true);
@@ -690,6 +662,7 @@ public class EYE_JUDGEView extends FrameView {
         jButton8.setVisible(true);
         jButton7.setEnabled(false);
         jButton8.setEnabled(false);
+        jButton9.setVisible(false);
         try {
             panel = new ImagePanel(file);
         } catch (IOException ex) {
@@ -718,8 +691,16 @@ public class EYE_JUDGEView extends FrameView {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        setStatus("Detecting...");
-        jButton8.setEnabled(true);
+        jButton9.setVisible(true);
+        jButton9.setEnabled(false);
+        setStatus("Detecting START");
+        if (LoginFrame.getRole().equals("user")) {
+            jButton8.setEnabled(false);
+            jButton8.setVisible(false);
+        } else {
+            jButton8.setEnabled(true);
+            jButton8.setVisible(true);
+        }
         seg = new Segment(img);
         seg.performDetection();
         int[][] temp = seg.getTemp();
@@ -740,6 +721,17 @@ public class EYE_JUDGEView extends FrameView {
         g.setColor(Color.RED);
         //g.fillOval((int) (centerX - pupil_dia/2), (int) (centerY- pupil_dia/2+5),(int) pupil_dia,(int) pupil_dia);
         g.drawOval((int) (pupilX - pupil_dia / 2) + 3, (int) (pupilY - pupil_dia / 2) + 3, (int) pupil_dia, (int) pupil_dia);
+        setStatus("Detecting END");
+        if (pupilX > 0 && pupilY > 0 && irisX > 0 && irisY > 0 && pupil_dia > 0 && iris_rad > 0) {
+            setStatus("DETECTION SUCCESS");
+            jButton9.setVisible(true);
+            jButton9.setEnabled(true);
+        }
+        else
+        {
+            setStatus(" ********** INPUT NOT GOOD, SELECT NEW INPUT ********** ");
+        }
+
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -803,7 +795,8 @@ public class EYE_JUDGEView extends FrameView {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         enroll = false;
         identify = true;
-        jPanel2.setVisible(false);
+//        jPanel2.setVisible(false);
+        jPanel4.setVisible(false);
         jPanel3.setVisible(true);
         jPanel5.setVisible(false);
         jButton6.setVisible(true);
@@ -811,6 +804,7 @@ public class EYE_JUDGEView extends FrameView {
         jButton8.setVisible(true);
         jButton7.setEnabled(false);
         jButton8.setEnabled(false);
+        jButton9.setVisible(false);
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -823,12 +817,12 @@ public class EYE_JUDGEView extends FrameView {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         //JOptionPane.showMessageDialog(mainPanel,"Under Construction", "Warning Message", JOptionPane.WARNING_MESSAGE);
-        jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         jPanel5.setVisible(false);
         jButton6.setVisible(false);
         jButton7.setVisible(false);
         jButton8.setVisible(false);
+        jButton9.setVisible(false);
 
         String id = JOptionPane.showInputDialog("Enter ID");
         int ID = Integer.parseInt(id);
@@ -844,21 +838,17 @@ public class EYE_JUDGEView extends FrameView {
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(mainPanel,"Under Construction", "Warning Message", JOptionPane.WARNING_MESSAGE);
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 EditAdmin dialog = new EditAdmin(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         e.getWindow().setVisible(false);
-                        
+
                     }
                 });
                 dialog.setVisible(true);
@@ -866,10 +856,46 @@ public class EYE_JUDGEView extends FrameView {
         });
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+// TODO add your handling code here:
+    setStatus("Searching User start");
+    seg.normalizeIris(pupilX, pupilY, pupil_dia / 2, iris_rad);
+    BufferedImage map = seg.getNormaliseImage();
+    int[][] real = new int[map.getWidth()][map.getHeight()];
+    int[][] img = new int[map.getWidth()][map.getHeight()];
+
+    GaborPhaseQuantization ob = new GaborPhaseQuantization(map);
+    ob.createTemplate();
+    ob.createPixel();
+    ob.convolve();
+    real = ob.getOutputReal();
+    img = ob.getOutputImg();
+
+    String code = "";
+    for (int i = 0; i < 90; i++) {
+        for (int j = 0; j < map.getHeight(); j++) {
+            code = code + String.valueOf(real[i][j]);
+            code = code + String.valueOf(img[i][j]);
+        }
+    }
+
+    for (int i = 270; i < +map.getWidth(); i++) {
+        for (int j = 0; j < map.getHeight(); j++) {
+            code = code + String.valueOf(real[i][j]);
+            code = code + String.valueOf(img[i][j]);
+        }
+    }
+    MatchIris matchIris = new MatchIris(code);
+    matchIris.connectToDatabase();
+    setStatus("Searching User end");
+    jButton9.setEnabled(false);
+    jButton7.setEnabled(false);
+}//GEN-LAST:event_jButton9ActionPerformed
+
     //opening file dialog to browse the required iris image
     private void performFileOpen() {
-      ActionHandle fileChooser = new ActionHandle();
-      file = fileChooser.getImageFile();
+        ActionHandle fileChooser = new ActionHandle();
+        file = fileChooser.getImageFile();
         if (file != null) {
             try {
                 img = ImageIO.read(file);
@@ -890,7 +916,6 @@ public class EYE_JUDGEView extends FrameView {
         jLabel8.setText(status);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -898,6 +923,7 @@ public class EYE_JUDGEView extends FrameView {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -910,7 +936,6 @@ public class EYE_JUDGEView extends FrameView {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -921,7 +946,6 @@ public class EYE_JUDGEView extends FrameView {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
